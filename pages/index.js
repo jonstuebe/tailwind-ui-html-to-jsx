@@ -14,6 +14,7 @@ function transform(text = "") {
       .replace(/<!--/g, "{/*")
       .replace(/-->/g, "*/}")
       .replace(/for=\"/g, 'htmlFor="')
+      .replace(/<img (.*)?>/g, "<img $1 />")
       .replace(/class="/g, 'className="'),
     [
       "clip-path",
